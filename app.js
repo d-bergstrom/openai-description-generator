@@ -12,6 +12,9 @@ app.listen(4000, () => console.log('Listening for requests on port 4000'));
 //This allows us to easily extract that body data to easily pass it to the different route handlers
 app.use(express.json());
 
+//Middleware that tells express that the public folder will be accessable to the browser
+app.use(express.static('public'));
+
 //Routes
 //Callback functions accept two arguments (req, res)
 app.post('/openai/description', generateDescription);
