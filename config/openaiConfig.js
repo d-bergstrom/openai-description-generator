@@ -1,6 +1,8 @@
+/* This file sets up the connection to the OpenAI API. */
+
 const { Configuration, OpenAIApi } = require('openai');
 
-//Use the dotenv config method to make API key available on the 'process' object.
+//Use the dotenv config method to make API Key available on the 'process' object.
 require('dotenv').config();
 
 const configuration = new Configuration({
